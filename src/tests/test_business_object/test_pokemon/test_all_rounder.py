@@ -1,11 +1,11 @@
-from business_object.pokemon.defender import Defender
+from business_object.pokemon.all_rounder import AllRounder
 from business_object.statistic import Statistic
 
 
-class TestDefender:
+class TestAllRounder:
     def test_get_coef_damage_type(self):
         # GIVEN
-        snorlax = Defender(stat_current=Statistic(attack=100, defense=100))
+        snorlax = AllRounder(stat_current=Statistic(sp_atk=100, sp_def=100))
 
         # WHEN
         multiplier = snorlax.get_pokemon_attack_coef()
